@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabbro LC Serrature</title>
+    <style>
+      /* Stili personalizzati per una navbar più accattivante */
+      .navbar {
+        background-color: #34495e; /* Sfondo più scuro */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .navbar-brand {
+        font-weight: bold;
+        color: white; /* Colore chiaro per contrastare con lo sfondo */
+      }
+      .nav-link {
+        color: white; /* Colore bianco per i link */
+        font-weight: 500;
+      }
+      .nav-link:hover {
+        color: #e74c3c; /* Effetto hover rosso */
+      }
+      .dropdown-menu {
+        background-color: #ecf0f1; /* Menu a discesa più chiaro */
+      }
+      .dropdown-item:hover {
+        background-color: #e74c3c;
+        color: white;
+      }
+      .navbar-nav .nav-item {
+        margin-left: 15px;
+      }
+      
+      /* Stili per l'immagine */
+      .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px; /* Spaziatura superiore */
+      }
+      .image-container img {
+        max-width: 90%; /* Ridimensiona l'immagine per non farla essere troppo grande */
+        height: auto;
+        border-radius: 8px; /* Bordo arrotondato per un look più moderno */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Ombreggiatura leggera */
+      }
+
+      /* Footer per un tocco finale */
+      .footer {
+        background-color: #34495e;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+      }
+      .footer a {
+        color: #e74c3c;
+        text-decoration: none;
+      }
+      .footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div>
+        <!-- Inizio navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Fabbro LC</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="ms-auto d-flex align-items-center">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">FABBRO</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            SERVIZI
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">RIPARAZIONE SERRATURE</a></li>
+                            <li><a class="dropdown-item" href="#">SOSTITUZIONE DEFENDER</a></li>
+                            <li><a class="dropdown-item" href="#">PORTE BLINDATE</a></li>
+                            <li><a class="dropdown-item" href="#">APERTURA CASSAFORTE</a></li>
+                            <li><a class="dropdown-item" href="#">APERTURA CAUSA SFRATTI</a></li>
+                            <li><a class="dropdown-item" href="#">CANCELLETTI BLINDATI</a></li>
+                            <li><a class="dropdown-item" href="#">SERRANDE</a></li>
+                            <li><a class="dropdown-item" href="#">TAPPARELLISTA</a></li>
+                            <li><a class="dropdown-item" href="#">TAPPARELLE</a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">CONTATTI</a>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+        </nav>
+        <!-- Fine navbar-->
+
+        <!--Immagine con contenitore centrato-->
+        <div class="image-container">
+            <img src="./assets/serratura.jpeg" alt="Serratura"/>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2024 Fabbro LC Serrature. <a href="#">Privacy Policy</a></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
