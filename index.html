@@ -1,346 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabbro LC Serrature</title>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
-
-      /*Dropdown*/
-      /* Stile per migliorare il dropdown della navbar */
-.navbar .dropdown-menu {
-    background-color: #50769d; /* Colore di sfondo scuro */
-    border: none; /* Rimuove il bordo predefinito */
-    border-radius: 8px; /* Bordo arrotondato */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aggiunge un'ombra */
-    transition: all 0.3s ease; /* Transizione per rendere l'apertura più fluida */
-    padding: 10px 0; /* Spaziatura verticale */
-}
-.listapartner{
-  font-size: 0.7rem;
-}
-.navbar .dropdown-menu .dropdown-item {
-    color: white; /* Testo bianco */
-    padding: 10px 20px; /* Spaziatura interna */
-    font-size: 0.9rem; /* Dimensione del testo */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transizione per hover */
-}
-
-.navbar .dropdown-menu .dropdown-item:hover {
-    background-color: #f39c12; /* Cambia colore di sfondo al passaggio del mouse */
-    color: white; /* Testo bianco */
-}
-.navbar .dropdown:hover .dropdown-menu {
-    display: block;   /* Mostra il menu */
-    opacity: 1;       /* Rende visibile il menu */
-    transition: opacity 0.3s ease; /* Aggiunge un effetto di transizione */
-}
-
-/* Aggiunge una piccola freccia decorativa sotto il dropdown */
-.navbar .dropdown-menu::before {
-    content: '';
-    position: absolute;
-    top: -8px;
-    right: 15px;
-    border-width: 0 8px 8px 8px;
-    border-style: solid;
-    border-color: transparent transparent #2c3e50 transparent;
-}
-
-      body {
-        font-family: 'Poppins', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-      }
-      /* Navbar professionale */
-      .navbar-toggler {
-        border-color: rgba(255, 255, 255, 0.5); /* Cambia il colore del bordo del pulsante */
-      }
-
-        .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-        /* Cambia il colore delle linee dell'icona in bianco */
-        }
-
-      .navbar {
-        background-color: #50769d;
-        padding: 15px 30px;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      }
-
-      .navbar-brand {
-        font-weight: 700;
-        color: white;
-        font-size: 1.8rem;
-        text-transform: uppercase;
-      }
-
-      .navbar-nav {
-        list-style: none;
-        display: flex;
-        align-items: center;
-      }
-
-      .nav-item {
-        margin-left: 20px;
-      }
-
-      .nav-link {
-        color: white;
-        font-weight: 500;
-        font-size: 0.8rem;
-        padding: 8px 15px;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-
-     /* .nav-link:active, .nav-link:focus {
-        color: #f39c12;
-        text-decoration: underline;
-      }*/
-
-      /* Hero image */
-      .hero {
-        background-image: url('./assets/serratura.jpeg');
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        color: white;
-        text-align: center;
-        padding: 20px;
-      }
-
-      .hero-overlay {
-        background-color: rgba(0, 0, 0, 0.5);
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-      }
-
-      .hero-text {
-        z-index: 2;
-        max-width: 600px;
-      }
-
-      .hero-text h1 {
-        font-size: 3rem;
-        font-weight: 700;
-      }
-
-      @media (max-width: 768px) {
-        .hero-text h1 {
-          font-size: 2rem;
-        }
-        .hero-text p {
-          font-size: 1rem;
-        }
-      }
-
-      .hero-text p {
-        font-size: 1.2rem;
-        margin-top: 15px;
-        font-weight: 300;
-      }
-
-      .btn-primary {
-        background-color: #f39c12;
-        border: none;
-        padding: 10px 25px;
-        color: white;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        margin-top: 20px;
-        text-transform: uppercase;
-      }
-
-      .btn-primary:hover {
-        background-color: #e67e22;
-      }
-
-      /* Rettangolo in alto a sinistra */
-      .hero .top-right-rectangle {
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        background-color: rgb(95, 132, 168);
-        padding: 20px;
-        color: white;
-        font-size: 1.5rem;
-        font-weight: 500;
-        z-index: 3;
-      }
-
-      /* Sezione di servizi */
-      .services {
-        padding: 60px 20px;
-        background-color: white;
-        text-align: center;
-      }
-
-      .services h2 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: #2c3e50;
-        margin-bottom: 40px;
-      }
-
-      .service-box {
-        margin-bottom: 30px;
-      }
-
-      @media (min-width: 768px) {
-        .service-box {
-          width: 30%;
-          display: inline-block;
-          margin: 0 1.5%;
-        }
-      }
-
-      .service-box {
-        padding: 30px;
-        background-color: #f9f9f9;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .service-box:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-      }
-
-      .service-box h3 {
-        font-size: 1.5rem;
-        color: #2c3e50;
-      }
-
-      .service-box p {
-        font-size: 1rem;
-        color: #7f8c8d;
-        margin-top: 15px;
-      }
-
-      /* Footer professionale */
-      .footer {
-        background-color: #50769d;
-        color: white;
-        text-align: center;
-        padding: 20px 0;
-        font-size: 0.7rem;
-        margin-top: 40px;
-      }
-
-      .footer a {
-        color: #f39c12;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s ease;
-      }
-
-      .footer a:hover {
-        color: #e67e22;
-      }
-
-      @media (max-width: 768px) {
-        .footer {
-          font-size: 0.8rem;
-          padding: 15px;
-        }
-      }
-    </style>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fabbro LC Serrature</title>
+  <link rel="stylesheet" href="base.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-<body>
-    <!-- Inizio navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Fabbro LC Serrature</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active text-light" href="#">FABBRO</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  SERVIZI
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Riparazione Serrature</a></li>
-                  <li><a class="dropdown-item" href="#">Riparazione Serrande</a></li>
-                  <li><a class="dropdown-item" href="#">Sostituzione defender</a></li>
-                  <li><a class="dropdown-item" href="#">Porte blindate</a></li>
-                  <li><a class="dropdown-item" href="#">Apertura cassaforte</a></li>
-                  <li><a class="dropdown-item" href="#">Apertura causa sfratti</a></li>
-                  <li><a class="dropdown-item" href="#">Cancelletti blindati</a></li>
-                  <li><a class="dropdown-item" href="#">Serrande</a></li>
-                  <li><a class="dropdown-item" href="#">Tapparellista</a></li>
-                  <li><a class="dropdown-item" href="#">Tapparelle</a></li>
-                </ul>
-            </li>
-            
-              <li class="nav-item">
-                
-                <a class="nav-link text-light" href="#">CONTATTI</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-    </nav>
 
-    <!-- Hero image con overlay -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <!--<div class="top-right-rectangle">
+<body>
+  <!-- Inizio navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Fabbro LC Serrature</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active text-light" href="#">FABBRO</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              SERVIZI
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Riparazione Serrature</a></li>
+              <li><a class="dropdown-item" href="#">Riparazione Serrande</a></li>
+              <li><a class="dropdown-item" href="#">Sostituzione defender</a></li>
+              <li><a class="dropdown-item" href="#">Porte blindate</a></li>
+              <li><a class="dropdown-item" href="#">Apertura cassaforte</a></li>
+              <li><a class="dropdown-item" href="#">Apertura causa sfratti</a></li>
+              <li><a class="dropdown-item" href="#">Cancelletti blindati</a></li>
+              <li><a class="dropdown-item" href="#">Serrande</a></li>
+              <li><a class="dropdown-item" href="#">Tapparellista</a></li>
+              <li><a class="dropdown-item" href="#">Tapparelle</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+
+            <a class="nav-link text-light" href="#">CONTATTI</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero image con overlay -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <!--<div class="top-right-rectangle">
             <p>Scrivici su whatsapp</p>
             <p>Chiamaci</p>
         </div>-->
-        <div class="hero-text">
-            <h1 class="display-1">RIPARAZIONE SERRATURE</h1>
-            <p>Fabbro LC Serrature da sempre si occupa di servizi di installazione,
-            sostituzione e riparazione di tutti i tipi di serrature con interventi rapidi,
-            professionali ed economici.</p>
-        </div>
-    </section>
+    <div class="hero-text">
+      <h1 class="display-1 ">RIPARAZIONE SERRATURE</h1>
+      <p class="">Fabbro LC Serrature da sempre si occupa di servizi di installazione,
+        sostituzione e riparazione di tutti i tipi di serrature con interventi rapidi,
+        professionali ed economici.</p>
+    </div>
+  </section>
 
-    <!-- Sezione servizi -->
-    <section class="services">
-        <h2>I Nostri Servizi</h2>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-4 service-box">
-                    <h3>Riparazione Serrature</h3>
-                    <p>Intervento rapido per la riparazione di serrature danneggiate.</p>
-                </div>
-                <div class="col-md-4 service-box">
-                    <h3>Porte Blindate</h3>
-                    <p>Installazione e manutenzione di porte blindate per la tua sicurezza.</p>
-                </div>
-                <div class="col-md-4 service-box">
-                    <h3>Tapparelle</h3>
-                    <p>Sostituzione e riparazione di tapparelle per protezione e comfort.</p>
-                </div>
-            </div>
+  <!-- Sezione servizi -->
+  <section class="services">
+    <h2 style="font-size: 2rem;">FABBRO LC SERRATURE</h2>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-3 mb-4 service-box">
+          <h3>Rapido</h3>
+          <p>Hai bisogno di un fabbro professionale, competente, onesto e rapido?
+             La nostra azienda è quello che fa per te! Offriamo un servizio di assistenza rapida a Milano, provincia, Monza e in tutti i comuni della Brianza con un team di tecnici specializzati.</p>
         </div>
-    </section>
+        <div class="col-md-3 mb-4 service-box">
+          <h3>Serrature di sicurezza</h3>
+          <p>Da sempre le serrature di sicurezza sono l’anima della nostra ditta.
+             Possiamo affermare di essere un’azienda leader di questo settore con interventi di riparazione, sostituzione e installazione per privati, attività commerciali e aziende.</p>
+        </div>
+        <div class="col-md-3 mb-4 service-box">
+          <h3>Porte blindate</h3>
+          <p>La scelta della porta blindata è fondamentale per proteggere la propria casa, il proprio business o i propri cari.
+            Per questo motivo affidarsi ad un’azienda specializzata è la soluzione migliore per avere un prodotto di qualità, sicuro e resistente.</p>
+        </div>
+        <div class="col-md-3 mb-4 service-box">
+          <h3>Inferiate e cancelli</h3>
+          <p>Oltre le serrature e le porte blindate di occupiamo anche di cancelli e inferiate per finestre e porte finestre. 
+            Realizzazioni su misura, riparazioni e installazioni per ogni esigenza. Non esitare a contattarci per richiedere un preventivo gratuito.</p>
+        </div>
+        <div class="col-md-3 mb-4 service-box">
+          <h3>Serrande e saracinesche</h3>
+          <p>Un guasto o un malfunzionamento della serranda del proprio negozio o della propria azienda può creare una grande perdita di tempo e un danno economico.
+             La nostra ditta in pochi minuti sarà da Voi per risolvere ogni problema.</p>
+        </div>
+        <div class="col-md-3 mb-4 service-box">
+          <h3>Manutenzione</h3>
+          <p>Il nostro servizio di assistenza da oltre 25 anni è riconosciuto su tutto il territorio per la sua professionalità, rapidità e competenza.
+             Avrai sempre a tua disposizione tecnici preparati e attrezzati con utensili di ultima generazione e materiali di altissima qualità.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <!--<footer class="footer">
+  <!-- Footer -->
+  <!--<footer class="footer">
       <div class="row">
         <div class="col-md-4"> 
            <p>
@@ -348,48 +115,52 @@
            </p>
         </div>
       </div>-->
-        <!--<p>&copy; 2024 Fabbro LC - <a href="#">Privacy Policy</a></p>-->
-        <footer class="footer  text-light py-4">
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-4">
-                      <h5 class="text-uppercase">Chi Siamo</h5>
-                      <p>
-                          Fabbro LC Serrature si occupa di installazione, sostituzione e riparazione
-                          di serrature. Interventi rapidi, professionali ed economici, sempre al servizio
-                          del cliente.
-                      </p>
-                  </div>
-                  <div class="col-md-4">
-                      <h5 class="text-uppercase">Contatti</h5>
-                      <ul class="list-unstyled">
-                          <li> SEDE LEGALE LC SERRATURE</li>
-                          <li> <i class="bi bi-geo-alt"></i>Via Crispi Francesco, 6 – 20900 MONZA</li>
-                          <li> <i class="bi bi-geo-alt"></i>Via Gaetano Lovati, 25 – 20099 Sesto San Giovanni</li>
-                          <li><i class="bi bi-telephone"></i> +39 351 602 2703</li>
-                          <li><i class="bi bi-envelope"></i> fabbrolcserrature@gmail.com</li>
-                          <li>P.IVA 09082580961</li>
-                      </ul>
-                  </div>
-                  <div class="col-md-4">
-                      <h5 class="text-uppercase">Seguici</h5>
-                      <div>
-                          <a href="https://www.facebook.com/people/Fabbro-Monza-Brianza/100064055679822/" target="_blank"><i class="bi bi-facebook text-light mx-2"></i></a>
-                      </div>
-                      <h5 class="text-uppercase mt-3">Siti partner</h5>
-                      <p class=" listapartner">Sesto San Giovanni</p>
-                  </div>
-              </div>
-              <div class="text-center pt-3">
-                  <p class="mb-0">&copy; 2024 Fabbro LC Serrature. Tutti i diritti riservati.</p>
-              </div>
+  <!--<p>&copy; 2024 Fabbro LC - <a href="#">Privacy Policy</a></p>-->
+  <footer class="footer  text-light py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5 class="text-uppercase">Chi Siamo</h5>
+          <p>
+            Fabbro LC Serrature si occupa di installazione, sostituzione e riparazione
+            di serrature. Interventi rapidi, professionali ed economici, sempre al servizio
+            del cliente.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-uppercase">Contatti</h5>
+          <ul class="list-unstyled">
+            <li> SEDE LEGALE LC SERRATURE</li>
+            <li> <i class="bi bi-geo-alt"></i>Via Crispi Francesco, 6 – 20900 MONZA</li>
+            <li> <i class="bi bi-geo-alt"></i>Via Gaetano Lovati, 25 – 20099 Sesto San Giovanni</li>
+            <li><i class="bi bi-telephone"></i> +39 351 602 2703</li>
+            <li><i class="bi bi-envelope"></i> fabbrolcserrature@gmail.com</li>
+            <li>P.IVA 09082580961</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-uppercase">Seguici</h5>
+          <div>
+            <a href="https://www.facebook.com/people/Fabbro-Monza-Brianza/100064055679822/" target="_blank"><i
+                class="bi bi-facebook text-light mx-2"></i></a>
           </div>
-      </footer>
-      
-      <!-- Bootstrap Icons CDN -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-      
-    <script src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+          <h5 class="text-uppercase mt-3">Siti partner</h5>
+          <p class=" listapartner">Sesto San Giovanni</p>
+        </div>
+      </div>
+      <div class="text-center pt-3">
+        <p class="mb-0">&copy; 2024 Fabbro LC Serrature. Tutti i diritti riservati.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
