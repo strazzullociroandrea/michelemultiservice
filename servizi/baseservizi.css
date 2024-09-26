@@ -1,0 +1,26 @@
+/* Testo allineato a destra e responsivo */
+.text-right-responsive {
+    font-size: 0.9rem;
+    text-align: left;
+    /* Allinea tutto il testo a destra */
+    margin: 1rem 0;
+    /* Margini per spaziatura */
+}
+
+/* Regola per schermi più piccoli (tablet e smartphone) */
+@media (max-width: 768px) {
+    .text-right-responsive {
+        font-size: 0.9rem;
+        text-align: left;
+        /* Cambia l'allineamento su schermi piccoli per migliorare la leggibilità */
+        }
+    }
+
+    /* Regola per schermi molto piccoli (smartphone verticali) */
+@media (max-width: 576px) {
+    .text-right-responsive {
+        text-align: left;
+        /* Rimane centrato su smartphone */
+        font-size: 0.9rem;
+    }
+}
