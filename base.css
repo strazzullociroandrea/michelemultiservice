@@ -1,20 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
-/*Dropdown*/
-/* Stile per migliorare il dropdown della navbar */
+
+/*Dropdown della navbar*/
 .navbar .dropdown-menu {
     background-color: #50769d;
-    /* Colore di sfondo scuro */
     border: none;
-    /* Rimuove il bordo predefinito */
     border-radius: 8px;
-    /* Bordo arrotondato */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* Aggiunge un'ombra */
     transition: all 0.3s ease;
-    /* Transizione per rendere l'apertura più fluida */
     padding: 10px 0;
-    /* Spaziatura verticale */
 }
 
 .listapartner {
@@ -23,41 +17,22 @@
 
 .navbar .dropdown-menu .dropdown-item {
     color: white;
-    /* Testo bianco */
     padding: 10px 20px;
-    /* Spaziatura interna */
     font-size: 0.9rem;
-    /* Dimensione del testo */
     transition: background-color 0.3s ease, color 0.3s ease;
-    /* Transizione per hover */
 }
 
 .navbar .dropdown-menu .dropdown-item:hover {
     background-color: #f39c12;
-    /* Cambia colore di sfondo al passaggio del mouse */
     color: white;
-    /* Testo bianco */
 }
 
 .navbar .dropdown:hover .dropdown-menu {
     display: block;
-    /* Mostra il menu */
     opacity: 1;
-    /* Rende visibile il menu */
     transition: opacity 0.3s ease;
-    /* Aggiunge un effetto di transizione */
 }
 
-/* Aggiunge una piccola freccia decorativa sotto il dropdown */
-.navbar .dropdown-menu::before {
-    content: '';
-    position: absolute;
-    top: -8px;
-    right: 15px;
-    border-width: 0 8px 8px 8px;
-    border-style: solid;
-    border-color: transparent transparent #2c3e50 transparent;
-}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -66,19 +41,18 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Navbar professionale */
 .navbar-toggler {
     border-color: rgba(255, 255, 255, 0.5);
-    /* Cambia il colore del bordo del pulsante */
 }
 
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    /* Cambia il colore delle linee dell'icona in bianco */
 }
-.bgcontatti{
+
+.bgcontatti {
     background-color: #50769d;
 }
+
 .navbar {
     background-color: #50769d;
     padding: 15px 30px;
@@ -114,11 +88,6 @@ body {
     text-decoration: none;
     transition: color 0.3s ease;
 }
-
-/* .nav-link:active, .nav-link:focus {
-        color: #f39c12;
-        text-decoration: underline;
-      }*/
 
 /* Hero image */
 .hero {
@@ -186,18 +155,7 @@ body {
     background-color: #e67e22;
 }
 
-/* Rettangolo in alto a sinistra */
-.hero .top-right-rectangle {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    background-color: rgb(95, 132, 168);
-    padding: 20px;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 500;
-    z-index: 3;
-}
+
 
 /* Sezione di servizi */
 .services {
@@ -249,7 +207,7 @@ body {
     margin-top: 15px;
 }
 
-/* Footer professionale */
+/* Footer */
 .footer {
     background-color: #50769d;
     color: white;
