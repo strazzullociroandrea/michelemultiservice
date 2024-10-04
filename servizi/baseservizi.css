@@ -10,13 +10,15 @@
     .text-right-responsive {
         font-size: 0.9rem;
         text-align: left;
+        margin: 1rem 2rem; /* Margine più ridotto su tablet */
     }
 }
 
 /* Regola per schermi molto piccoli (smartphone verticali) */
 @media (max-width: 576px) {
     .text-right-responsive {
+        font-size: 1rem; /* Leggermente più grande per la leggibilità su schermi piccoli */
         text-align: left;
-        font-size: 0.9rem;
+        margin: 1rem 1rem; /* Margini minimi su smartphone */
     }
 }
