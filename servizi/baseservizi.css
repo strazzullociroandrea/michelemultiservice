@@ -1,8 +1,8 @@
 /* Testo allineato a destra e responsivo */
 .text-right-responsive {
     font-size: 0.9rem;
-    text-align:justify;
-    margin: 5rem 4rem;
+    text-align: justify;
+    margin: 1rem 17rem;
 }
 
 /* Regola per schermi più piccoli (tablet e smartphone) */
