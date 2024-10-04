@@ -234,3 +234,21 @@ body {
         padding: 15px;
     }
 }
+
+
+/* immagini */
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0; 
+}
+
+.image-gallery img {
+    width: 400px; 
+    height: 400px;
+    margin: 10px;
+    border-radius: 10px;
+    object-fit: cover; 
+}
